@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MPTB Water Tourism Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      background-color: #f5faff;
+    }
+    h2 {
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-top: 12px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      padding: 8px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #007BFF;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h2>Madhya Pradesh Tourism Board - Water Tourism Application</h2>
+  <form id="applicationForm">
+    <label>Applicant's Name *</label>
+    <input name="ApplicantName" required />
+
+    <label>Address *</label>
+    <input name="Address" required />
+
+    <label>Contact Number *</label>
+    <input name="ContactNumber" type="tel" required />
+
+    <label>Email ID *</label>
+    <input name="EmailID" type="email" required />
+
+    <label>Occupation *</label>
+    <input name="Occupation" required />
+
+    <label>PAN No. *</label>
+    <input name="PAN" required />
+
+    <label>Aadhaar No. *</label>
+    <input name="Aadhaar" required />
+
+    <label>GSTIN</label>
+    <input name="GSTIN" />
+
+    <label>Area of the Water Bodies *</label>
+    <input name="Area" required />
+
+    <label>Name of Reservoir / Water Body *</label>
+    <select name="Reservoir" required>
+      <option value="">--Select--</option>
+      <option value="1">Indira Sagar Dam</option>
+      <option value="2">Omkareshwar Dam</option>
+      <option value="3">Tawa Dam</option>
+      <option value="4">Bargi Dam</option>
+      <option value="5">Bansagar Dam</option>
+      <option value="6">Gandhi Sagar Dam</option>
+      <option value="7">Manikheda Dam</option>
+      <option value="8">Halali Dam</option>
+      <option value="9">Chandpatha Dam</option>
+      <option value="10">Betwa river (Orchha)</option>
+      <option value="11">Chaural Dam</option>
+      <option value="12">Gangau Dam</option>
+      <option value="13">Barna Dam</option>
+      <option value="14">Mann Dam (Dhar)</option>
+      <option value="15">Hathni River</option>
+      <option value="16">Dholabad (Ratlam)</option>
+      <option value="17">Tighara (Gwalior)</option>
+      <option value="18">Kishanpura (Indore)</option>
+      <option value="19">Govindgarh (Rewa)</option>
+      <option value="20">Kolar (Bhopal)</option>
+      <option value="21">Machagora (Chhindwada)</option>
+      <option value="22">Sapna Dam (Betul)</option>
+    </select>
+
+    <label>Applied For Type *</label>
+    <input name="TypeApplied" placeholder="e.g. Cruise, Motor Boat" required />
+
+    <label>Application Fee *</label>
+    <input name="ApplicationFee" type="number" value="2360" readonly required />
+
+    <label>Transaction Type (DD/UPI/NEFT) *</label>
+    <input name="TransactionType" required />
+
+    <label>Reference No / DD No / UTR No *</label>
+    <input name="ReferenceNo" required />
+
+    <label>Date *</label>
+    <input name="Date" type="date" required />
+
+    <label>Bank Name and Branch (for DD only)</label>
+    <input name="BankDetails" />
+
+    <label>Declaration *</label>
+    <textarea name="Declaration" required>
+I hereby declare that the above mentioned details are true to the best of my belief & knowledge...
+    </textarea>
+
+    <input type="hidden" name="Timestamp" id="Timestamp" />
+    <input type="hidden" name="Refnumber" id="Refnumber" />
+
+    <button type="submit">Submit Application</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('applicationForm');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Set timestamp
+      const now = new Date();
+      document.getElementById('Timestamp').value = now.toISOString();
+
+      // Generate ref number
+      const rand = Math.floor(100 + Math.random() * 900);
+      document.getElementById('Refnumber').value = `MPTB/WTA/${rand}/25`;
+
+      const formData = new FormData(form);
+      const data = {};
+      formData.forEach((value, key) => data[key] = value);
+
+      // Replace this with your actual Web App URL
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwjwODPUKwJHP4x9wEnFLXupR6Ki4Eh3yHGQt9S-s279egluTo3EOGcXk17fxB/exec';
+
+      try {
+        const response = await fetch(scriptURL, {
+          method: 'POST',
+          body: JSON.stringify(data),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+
+        const result = await response.json();
+        alert('Application submitted successfully!\nRef No: ' + data.Refnumber);
+        form.reset();
+      } catch (error) {
+        console.error('Error!', error.message);
+        alert('Failed to submit. Please try again later.');
+      }
+    });
+  </script>
+</body>
+</html>
