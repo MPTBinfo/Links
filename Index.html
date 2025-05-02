@@ -1,108 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MP Tourism - Linktree</title>
-    <style>
-        body {
-            background-color: #f4efe6;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            color: #2e3b1f;
-            background-image: url('tiger-pattern.png');
-            background-size: cover;
-            background-blend-mode: soft-light;
-        }
-        .container {
-            margin-top: 50px;
-        }
-        h1 {
-            text-shadow: 0 0 10px #d4a017;
-        }
-        .logo {
-            width: 150px;
-            height: auto;
-            margin: 20px auto;
-        }
-        .section {
-            margin-top: 30px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            width: 80%;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            box-shadow: 0 0 10px #ccc;
-        }
-        .link {
-            display: block;
-            background: #6b4226;
-            color: white;
-            padding: 15px;
-            margin: 10px auto;
-            width: 90%;
-            max-width: 500px;
-            border-radius: 25px;
-            font-size: 18px;
-            text-decoration: none;
-            font-weight: bold;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s;
-        }
-        .link:hover {
-            background: #d4a017;
-            color: black;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        }
-        footer {
-            margin-top: 50px;
-            padding: 20px;
-            background-color: #5a3825;
-            color: white;
-            font-size: 14px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MPTB Water Tourism Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      background-color: #f5faff;
+    }
+    h2 {
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-top: 12px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      padding: 8px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #007BFF;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <img class="logo" src="https://tourismevents.mponline.gov.in/themes/sws/images/LOGO.PNG" alt="MP Tourism Logo">
-        <h1>Madhya Pradesh Tourism Board</h1>
-        
-        <div class="section">
-            <h2>🌍 Official Links</h2>
-            <a class="link" href="https://www.tourism.mp.gov.in" target="_blank">Official Website</a>
-            <a class="link" href="https://www.tourism.mp.gov.in/viewall?page=Policy&number=Y7Ubn6c7hvLjihiwyLyQ/w==&ty=ydRRTTxkdt6Trx91pX1+cA==" target="_blank">Policies</a>
-            <a class="links" href="https://script.google.com/macros/s/AKfycbwOkbcksDOHoOIGzJOTsMqTtTm8Yaggjds_UJttqZUdbl23x51Yc6iw3mhcLGt6xM25xA/exec" target="_blank">WT_Admin Login</a>
-        </div>
-        
-        <div class="section">
-            <h2>📢 Social Media</h2>
-            <a class="link" href="https://www.instagram.com/mptourism" target="_blank">Instagram</a>
-            <a class="link" href="https://www.facebook.com/mptourism" target="_blank">Facebook</a>
-            <a class="link" href="https://twitter.com/MPTourism" target="_blank">Twitter/X</a>
-            <a class="link" href="https://www.youtube.com/c/mptourism" target="_blank">YouTube</a>
-            <a class="link" href="https://www.linkedin.com/company/madhya-pradesh-tourism" target="_blank">LinkedIn</a>
-        </div>
-        
-        <div class="section">
-            <h2>🏞 Tourism & Adventure</h2>
-            <a class="link" href="https://www.mptourism.com/itinerary.php" target="_blank">Tour Packages</a>
-            <a class="link" href="https://www.mptourism.com/accomodation.php" target="_blank">Hotels and Resorts</a>
-            <a class="link" href="https://www.mptourism.com/adventure.php" target="_blank">Adventure & Activities</a>
-        </div>
-        
-        <div class="section">
-            <h2>📞 Contact Us</h2>
-            <a class="link" href="mailto:info.mptb@mp.gov.in" target="_blank">E-Mail</a>
-            <a class="link" href="tel:07552780600" target="_blank">Call Us</a>
-        </div>
-    </div>
-    
-    <footer>
-        <p>📍 Madhya Pradesh Tourism Board, 6th Floor, Lily Trade Wing, Jahangirabad, Bhopal, 462008</p>
-        <p>📧 info.mptb@mp.gov.in | ☎️ 0755-2780600</p>
-    </footer>
+  <h2>Madhya Pradesh Tourism Board - Water Tourism Application</h2>
+  <form id="applicationForm">
+    <label>Applicant's Name *</label>
+    <input name="ApplicantName" required />
+
+    <label>Address *</label>
+    <input name="Address" required />
+
+    <label>Contact Number *</label>
+    <input name="ContactNumber" type="tel" required />
+
+    <label>Email ID *</label>
+    <input name="EmailID" type="email" required />
+
+    <label>Occupation *</label>
+    <input name="Occupation" required />
+
+    <label>PAN No. *</label>
+    <input name="PAN" required />
+
+    <label>Aadhaar No. *</label>
+    <input name="Aadhaar" required />
+
+    <label>GSTIN</label>
+    <input name="GSTIN" />
+
+    <label>Area of the Water Bodies *</label>
+    <input name="Area" required />
+
+    <label>Name of Reservoir / Water Body *</label>
+    <select name="Reservoir" required>
+      <option value="">--Select--</option>
+      <option value="1">Indira Sagar Dam</option>
+      <option value="2">Omkareshwar Dam</option>
+      <option value="3">Tawa Dam</option>
+      <option value="4">Bargi Dam</option>
+      <option value="5">Bansagar Dam</option>
+      <option value="6">Gandhi Sagar Dam</option>
+      <option value="7">Manikheda Dam</option>
+      <option value="8">Halali Dam</option>
+      <option value="9">Chandpatha Dam</option>
+      <option value="10">Betwa river (Orchha)</option>
+      <option value="11">Chaural Dam</option>
+      <option value="12">Gangau Dam</option>
+      <option value="13">Barna Dam</option>
+      <option value="14">Mann Dam (Dhar)</option>
+      <option value="15">Hathni River</option>
+      <option value="16">Dholabad (Ratlam)</option>
+      <option value="17">Tighara (Gwalior)</option>
+      <option value="18">Kishanpura (Indore)</option>
+      <option value="19">Govindgarh (Rewa)</option>
+      <option value="20">Kolar (Bhopal)</option>
+      <option value="21">Machagora (Chhindwada)</option>
+      <option value="22">Sapna Dam (Betul)</option>
+    </select>
+
+    <label>Applied For Type *</label>
+    <input name="TypeApplied" placeholder="e.g. Cruise, Motor Boat" required />
+
+    <label>Application Fee *</label>
+    <input name="ApplicationFee" type="number" value="2360" readonly required />
+
+    <label>Transaction Type (DD/UPI/NEFT) *</label>
+    <input name="TransactionType" required />
+
+    <label>Reference No / DD No / UTR No *</label>
+    <input name="ReferenceNo" required />
+
+    <label>Date *</label>
+    <input name="Date" type="date" required />
+
+    <label>Bank Name and Branch (for DD only)</label>
+    <input name="BankDetails" />
+
+    <label>Declaration *</label>
+    <textarea name="Declaration" required>
+I hereby declare that the above mentioned details are true to the best of my belief & knowledge...
+    </textarea>
+
+    <input type="hidden" name="Timestamp" id="Timestamp" />
+    <input type="hidden" name="Refnumber" id="Refnumber" />
+
+    <button type="submit">Submit Application</button>
+  </form>
+
+  <script>
+    const form = document.getElementById('applicationForm');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      // Set timestamp
+      const now = new Date();
+      document.getElementById('Timestamp').value = now.toISOString();
+
+      // Generate ref number
+      const rand = Math.floor(100 + Math.random() * 900);
+      document.getElementById('Refnumber').value = `MPTB/WTA/${rand}/25`;
+
+      const formData = new FormData(form);
+      const data = {};
+      formData.forEach((value, key) => data[key] = value);
+
+      // Replace this with your actual Web App URL
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwjwODPUKwJHP4x9wEnFLXupR6Ki4Eh3yHGQt9S-s279egluTo3EOGcXk17fxB/exec';
+
+      try {
+        const response = await fetch(scriptURL, {
+          method: 'POST',
+          body: JSON.stringify(data),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        });
+
+        const result = await response.json();
+        alert('Application submitted successfully!\nRef No: ' + data.Refnumber);
+        form.reset();
+      } catch (error) {
+        console.error('Error!', error.message);
+        alert('Failed to submit. Please try again later.');
+      }
+    });
+  </script>
 </body>
 </html>
