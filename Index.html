@@ -1,173 +1,535 @@
+
+
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MPTB Water Tourism Application</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-      background-color: #f5faff;
-    }
-    h2 {
-      text-align: center;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-    label {
-      margin-top: 12px;
-      font-weight: bold;
-    }
-    input, select, textarea {
-      padding: 8px;
-      font-size: 1rem;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    button {
-      margin-top: 20px;
-      padding: 10px;
-      background-color: #007BFF;
-      border: none;
-      color: white;
-      font-size: 1rem;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    button:hover {
-      background-color: #0056b3;
-    }
-  </style>
-</head>
+<head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>
+	MP Tourism Board
+</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /><link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png" /><link rel="icon" type="image/png" href="assets/img/favicon.png" />
+   
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="vendor/css/bootstrap.min.css" />
+   <!-- fonts -->
+   <link rel="stylesheet" href="fonts/fonts.css" />
+   <!-- plugin -->
+   <link href="vendor/css/slick.css" rel="stylesheet" /><link href="vendor/css/slick-theme.css" rel="stylesheet" /><link rel="stylesheet" href="vendor/css/font-awesome.min.css" /><link rel="stylesheet" href="vendor/css/materialdesignicons.min.css" /><link href="vendor/css/jquery.mCustomScrollbar.min.css" rel="stylesheet" /><link href="vendor/css/jquery.fancybox.min.css" rel="stylesheet" /><link href="vendor/css/animate.css" rel="stylesheet" /><link href="vendor/css/bootsnav.css" rel="stylesheet" /><link href="vendor/css/on-off.css" rel="stylesheet" />
+   <!-- Custom CSS -->
+   <link id="ctl00_theme" rel="stylesheet" href="assets/css/main.css" /></head>
 <body>
-  <h2>Madhya Pradesh Tourism Board - Water Tourism Application</h2>
-  <form id="applicationForm">
-    <label>Applicant's Name *</label>
-    <input name="ApplicantName" required />
+    <form method="post" action="./viewall?page=Policy&amp;number=Y7Ubn6c7hvLjihiwyLyQ%2fw%3d%3d&amp;ty=ydRRTTxkdt6Trx91pX1+cA%3d%3d" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
 
-    <label>Address *</label>
-    <input name="Address" required />
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
 
-    <label>Contact Number *</label>
-    <input name="ContactNumber" type="tel" required />
 
-    <label>Email ID *</label>
-    <input name="EmailID" type="email" required />
+<div class="aspNetHidden">
 
-    <label>Occupation *</label>
-    <input name="Occupation" required />
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6D118D0F" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="pnHDgaebF5unibej9cD+BIERX3ElaNuW6rDYS2VVJOgHNyNIVHdOmbigTukTlVZKbAORTApfuiQNp7eKEaDYKDRhm0JhjtlgphMjtTkAb39anwcdBCQbMyh9ZHV26sWgg4ES3iendrAE9NoUtLSyQAxO4x4D/H0ON2MNmEa/zJcJ2Js4sKskFYnaOo1qORA0sGaAxTM4ydh1/I5l36EpjI1l3IGVsGGt8AKHzWZJlccd0Zv2FFGT8js/Erqr+bpzcVzf8qkpP38sxwbYw9bOox3EH1Wt0tOBvcYX3qB/b+wMECNDplUsd9X9+pg4hnfLfna4BtkCzq2NdTpUkqZMcoPEPfRR5jmBmLnpfLSF/LVWs9JAje9cDbseGQFE5jeLAY7O3slnhbuKlJ3KHDbDt7KaDd8RvXTzCzrVLCNOz9lBubjYlWhoheUsSlgYHqgkIslJe+LN89Adud8JWX4WaTlhzVdespHidbg+kSiIwvIGzhZE2ARTtTIzhqSoXNLjmTeaNTZAqV9hpI15qSWMYGmVVw/ID4GwuvIo5drWk1S98P/fYq+n20dAa1xJ2hhCbtqwP6N8MHXWLAXj2yXYNgLedkZjnWsoYeRPnV0uRUcTuHRtVuhjzYjtBmpZjdcXt8QXaOzo/LjcuX5bmrif3qKGG5ffW6RmXN2JmG5313YMWRENgmZ5LP+NEUFZfqUWhkmcxJRy34l2fPm0StbWXP//s88=" />
+</div>
+      <div class="main">
+      <header class="fixed-top">
+         <!-- Topbar -->
+         <nav class="navbar navbar-expand-md navbar-light pad0" id="topnav">
+            <div class="container">
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="fa fa-gears"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                     <li class="nav-item resizer">
 
-    <label>PAN No. *</label>
-    <input name="PAN" required />
+                    
 
-    <label>Aadhaar No. *</label>
-    <input name="Aadhaar" required />
 
-    <label>GSTIN</label>
-    <input name="GSTIN" />
+                        <a id="ctl00_headingscreenreader" class="nav-link sm">Screen Reader</a>
+                     </li>
+                     <li class="nav-item resizer" >
+                        <a href="#skiptomaincontent" id="ctl00_headingskiptomaincontent" class="nav-link md">Skip to Main Content</a>
+                     </li>
+                     <li class="nav-item resizer">
+                        <a href="#menu" id="ctl00_headingskiptonavigation" class="nav-link lg">Skip to Navigation</a>
+                     </li>
+                  </ul>
+                  <ul class="navbar-nav ml-auto">
+                     
 
-    <label>Area of the Water Bodies *</label>
-    <input name="Area" required />
+                     
+                            <li class="nav-item font-slection">
+                                 <div class="pr-1">
+              <a href="javascript:void(0);" id="ctl00_headingfonts" title="Decrease font size" onclick="set_font_size(&#39;decrease&#39;)" class="sm">A-</a></div>
+              </li>
+              <li class="nav-item font-slection"> <div class="pr-1">
+              <a href="javascript:void(0);" id="ctl00_headingfontm" title="Reset font size" onclick="set_font_size(&#39;&#39;)" class="md">A</a></div>
+              </li>
+              <li class="nav-item font-slection"> <div class="pr-1">
+              <a href="javascript:void(0);" id="ctl00_headingfontl" title="Increase font size" onclick="set_font_size(&#39;increase&#39;)" class="lg">A+</a></div>
+              </li>
 
-    <label>Name of Reservoir / Water Body *</label>
-    <select name="Reservoir" required>
-      <option value="">--Select--</option>
-      <option value="1">Indira Sagar Dam</option>
-      <option value="2">Omkareshwar Dam</option>
-      <option value="3">Tawa Dam</option>
-      <option value="4">Bargi Dam</option>
-      <option value="5">Bansagar Dam</option>
-      <option value="6">Gandhi Sagar Dam</option>
-      <option value="7">Manikheda Dam</option>
-      <option value="8">Halali Dam</option>
-      <option value="9">Chandpatha Dam</option>
-      <option value="10">Betwa river (Orchha)</option>
-      <option value="11">Chaural Dam</option>
-      <option value="12">Gangau Dam</option>
-      <option value="13">Barna Dam</option>
-      <option value="14">Mann Dam (Dhar)</option>
-      <option value="15">Hathni River</option>
-      <option value="16">Dholabad (Ratlam)</option>
-      <option value="17">Tighara (Gwalior)</option>
-      <option value="18">Kishanpura (Indore)</option>
-      <option value="19">Govindgarh (Rewa)</option>
-      <option value="20">Kolar (Bhopal)</option>
-      <option value="21">Machagora (Chhindwada)</option>
-      <option value="22">Sapna Dam (Betul)</option>
-    </select>
+ 
+                
+             
+                   <li class="nav-item pt-2">
+                       <a id="ctl00_Language1_lnkhindi" class="fa fa-globe" href="javascript:__doPostBack(&#39;ctl00$Language1$lnkhindi&#39;,&#39;&#39;)"> हिंदी</a> 
 
-    <label>Applied For Type *</label>
-    <input name="TypeApplied" placeholder="e.g. Cruise, Motor Boat" required />
 
-    <label>Application Fee *</label>
-    <input name="ApplicationFee" type="number" value="2360" readonly required />
+</li>
+                   
+                     <li class="nav-item">
+                        <a href="loginpage.aspx" id="ctl00_headinglogin" class="nav-link">CMS Login</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </nav>
+         <!-- navigation -->
+         <nav class="navbar navbar-default brand-center bootsnav" id="navigation">
+          <div class="container">
 
-    <label>Transaction Type (DD/UPI/NEFT) *</label>
-    <input name="TransactionType" required />
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                <i class="fa fa-bars"></i>
+            </button>
+             <a class="navbar-brand" href="#brand"><img src="assets/img/logo.svg" class="logo" alt="MP Tourism"></a>
+          </div>
+          <!-- End Header Navigation -->
 
-    <label>Reference No / DD No / UTR No *</label>
-    <input name="ReferenceNo" required />
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navbar-menu">
+           <ul id="ctl00_topmenu" class="nav navbar-nav" data-in="fadeIn" data-out="fadeOut">
+           
+         <li class="nav-item active"><a id="ctl00_595" href="fristpage.aspx" class="nav-item active">Home</a></li><li class="dropdown"><a id="ctl00_600" href="contents.aspx?page=about-us&amp;number=XpPYuZgNhbz56Mc4v1V4eA==" class="dropdown-toggle" data-toggle="dropdown">About us</a><ul class="dropdown-menu" role="menu"><li><a id="ctl00_res639" href="contents.aspx?page=mptb&amp;number=5j8EavuUVsnY8v1GSezWFg==">MPTB</a></li><li><a id="ctl00_res640" href="contents.aspx?page=assets-2&amp;number=HCCv6TGU1TooG7/pfoQQHw==">Organization Structure</a></li><li><a id="ctl00_res652" href="contents.aspx?page=tourism-administrator&amp;number=klwjxrfCc05Z2YxbCjk2XQ==">Tourism Administrator</a></li></ul></li><li class="dropdown"><a id="ctl00_630" href="contents.aspx?page=promotions-2&amp;number=3AjINaTcYYVFotXn+o/u3g==" class="dropdown-toggle" data-toggle="dropdown">Information</a><ul class="dropdown-menu" role="menu"><li><a id="ctl00_res648" href="contents.aspx?page=events-in-mp&amp;number=D/ToReTOLeAV5e+a5rl+mA==">Events in MP</a></li><li><a id="ctl00_res633" href="contents.aspx?page=&amp;number=urht7juuAB1ysT/jjF/iEA==">Skill Development &amp; Promotions </a></li><li><a id="ctl00_res649" href="contents.aspx?page=datcc&amp;number=Tw9wnVTb79SzqENkmbcx2g=="> DATCC</a></li><li><a id="ctl00_res634" href="contents.aspx?page=tourism-quiz&amp;number=Oi9sHoF6x0inwIfClD80BQ==">Tourism Quiz</a></li><li><a id="ctl00_res631" href="contents.aspx?page=event-2&amp;number=GjJkRbr1/D/neNxNmUR9/A==">RTI</a></li><li><a id="ctl00_res676" href="contents.aspx?page=administrative-report&amp;number=Fag+VcjbfJGWvk9kyepJow==">Administrative Report</a></li><li><a id="ctl00_res677" href="contents.aspx?page=tsp-registration&amp;number=qMBGcy+BPy0M0f8juOcIKQ==">TSP Registration</a></li><li><a id="ctl00_res682" href="https://www.mptourism.com/travel-agents.php" target="_blank">Travel Agents &amp; Tour Guides</a></li></ul></li><li class="dropdown"><a id="ctl00_622" href="contents.aspx?page=events-&amp;-road-shows&amp;number=+iVX/FcvQtrbTJvFD/FuLA==" class="dropdown-toggle" data-toggle="dropdown">Events &amp; Road shows</a><ul class="dropdown-menu" role="menu"><li><a id="ctl00_res623" href="contents.aspx?page=national&amp;number=1RDkPqqNHtQxiJES0D8V3A==">National</a></li><li><a id="ctl00_res624" href="contents.aspx?page=international&amp;number=0Y+UpUW5f2piXmfdzfGLBA==">International</a></li><li><a id="ctl00_res678" href="https://tourismevents.mponline.gov.in/" target="_blank">License for Tourism Events</a></li></ul></li><li class="dropdown"><a id="ctl00_625" href="contents.aspx?page=homestay&amp;number=jtgYPf+tmICK2N8tHLothw==" class="dropdown-toggle" data-toggle="dropdown">Homestay</a><ul class="dropdown-menu" role="menu"><li><a id="ctl00_res681" href="https://tourism.mp.gov.in/contents?page=homestay&amp;number=jtgYPf+tmICK2N8tHLothw==" target="_blank">About Homestay Scheme</a></li><li><a id="ctl00_res627" href="https://mphomestay.mponline.gov.in/" target="_blank">Click here to register</a></li><li><a id="ctl00_res679" href="https://www.mptourism.com/homestays/index.php?route=hotel/home" target="_blank">Registered Homestay</a></li></ul></li><li class="dropdown"><a id="ctl00_615" href="contents.aspx?page=contact-us&amp;number=zm37jeJqrlEi1vT2PvX/9Q==" class="dropdown-toggle" data-toggle="dropdown">Invest in M.P</a><ul class="dropdown-menu" role="menu"><li><a id="ctl00_res616" href="contents.aspx?page=land-bank&amp;number=+SkZaBIAw63YERYOor2mbQ==">Land Bank</a></li><li><a id="ctl00_res617" href="contents.aspx?page=wsa&amp;number=RdZcR/YL1Md3wesIflshHQ==">WSA</a></li><li><a id="ctl00_res620" href="contents.aspx?page=invest-in-water-bodies&amp;number=Yn3tnIZ1G29RNlGcWd9Uaw==">Invest in Water Bodies</a></li><li><a id="ctl00_res621" href="contents.aspx?page=capital-subsidies-&amp;-status&amp;number=tCviB3KCZDOqPd/+mRSkEQ=="> Capital Subsidies &amp; Status</a></li><li><a id="ctl00_res653" href="contents.aspx?page=heritage-property&amp;number=yJsMd2h+Hr4mv0VMnWdL2Q==">Heritage Property</a></li><li><a id="ctl00_res671" href="http://tourism.mp.gov.in/campingsite/" target="_blank">Camping Portal</a></li><li><a id="ctl00_res672" href="contents.aspx?page=http://tourism.mp.gov.in/ohrs/&amp;number=VmufAlsXTW831N9jzSwArg==">Online Hotel Registration System</a></li></ul></li><li><a id="ctl00_635" href="contents.aspx?page=www.filmcell.mponline.gov.in &amp;number=PIK13eM0ZDUED+jPLO+/og==">Film Tourism</a></li><li><a id="ctl00_641" href="contents.aspx?page=contact-us&amp;number=mFBPpobhai+yL75rr/VMtA==">Contact us</a></li></ul>
+      </div><!-- /.navbar-collapse -->
+   </div>    
+</nav>
+</header>
+ <article id="fontSize">
+<div class="innerbg">
+    <div class="titlediv">
+      <div class="container">
+        <div class="inner-heading text-center">
+          <h2></h2>
+          <nav aria-label="breadcrumb" class="breads">
+            <ol id="ctl00_brudcrumbasp" class="breadcrumb">
+             
+            <a href="fristpage.aspx">Home >> </a><a href="contents.aspx?page=websitefeedback.aspx&amp;number=Y7Ubn6c7hvLjihiwyLyQ/w=="></a></ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- about -->
+<section class="about sec-pad">
+   <div class="container">
+      <div class="row">
+         <div class="col-md-9">
+            <div class="theme-box">
+                
+       <div class="leftbar">
+       <div class="left-header" >
+                    <i class="mdi mdi-information-variant"></i>  
+                   <span id="ctl00_ContentPlaceHolder1_PageHeading">Policy</span> 
+                  </div>
+                    <p id="ctl00_ContentPlaceHolder1_PageContent">
+                        <table cellspacing="1" cellpadding="5" id="ctl00_ContentPlaceHolder1_gvtendernotice" style="width:100%;border:none">
+	<tr>
+		<td>
+                
 
-    <label>Date *</label>
-    <input name="Date" type="date" required />
+               <div style="color:#000000;line-height:25px;font-weight:normal;font-size:13px">
+               <A href='https://tourism.mp.gov.in/Uploaded%20Document/PoliciesandNotifications/Tourism%20Policy%202025.pdf' target='_blank'>Tourism Policy 2025</a></a>
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$gvtendernotice$ctl02$HiddenField1" id="ctl00_ContentPlaceHolder1_gvtendernotice_ctl02_HiddenField1" value="2643" />
+                </div>
+                
+                   
+                    </td>
+	</tr><tr>
+		<td>
+                
 
-    <label>Bank Name and Branch (for DD only)</label>
-    <input name="BankDetails" />
+               <div style="color:#000000;line-height:25px;font-weight:normal;font-size:13px">
+               <A href='https://tourism.mp.gov.in/Uploaded%20Document/PoliciesandNotifications/Final%20Tourism%20Policy%202025%20final.pdf' target='_blank'>Film Tourism Policy 2025</a></a>
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$gvtendernotice$ctl03$HiddenField1" id="ctl00_ContentPlaceHolder1_gvtendernotice_ctl03_HiddenField1" value="2642" />
+                </div>
+                
+                   
+                    </td>
+	</tr><tr>
+		<td>
+                
 
-    <label>Declaration *</label>
-    <textarea name="Declaration" required>
-I hereby declare that the above mentioned details are true to the best of my belief & knowledge...
-    </textarea>
+               <div style="color:#000000;line-height:25px;font-weight:normal;font-size:13px">
+               <A href='Uploaded Document/PoliciesandNotifications/09122024042357User_Manual_Shooting_Permission.pdf' target='_blank'>Apply for Film Permission</a></a>
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$gvtendernotice$ctl04$HiddenField1" id="ctl00_ContentPlaceHolder1_gvtendernotice_ctl04_HiddenField1" value="2580" />
+                </div>
+                
+                   
+                    </td>
+	</tr><tr>
+		<td>
+                
 
-    <input type="hidden" name="Timestamp" id="Timestamp" />
-    <input type="hidden" name="Refnumber" id="Refnumber" />
+               <div style="color:#000000;line-height:25px;font-weight:normal;font-size:13px">
+               <A href='Uploaded Document/PoliciesandNotifications/31012024054657Gender Policy MP Tourism.pdf' target='_blank'>Poilcy On Gender Equality And Women’s Empowerment</a></a>
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$gvtendernotice$ctl05$HiddenField1" id="ctl00_ContentPlaceHolder1_gvtendernotice_ctl05_HiddenField1" value="2543" />
+                </div>
+                
+                   
+                    </td>
+	</tr><tr>
+		<td>
+                
 
-    <button type="submit">Submit Application</button>
-  </form>
+               <div style="color:#000000;line-height:25px;font-weight:normal;font-size:13px">
+               <A href='Uploaded Document/PoliciesandNotifications/28072023012010Policies 2016-2019.pdf' target='_blank'>Sectoral Policies 2016-2019</a></a>
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$gvtendernotice$ctl06$HiddenField1" id="ctl00_ContentPlaceHolder1_gvtendernotice_ctl06_HiddenField1" value="2452" />
+                </div>
+                
+                   
+                    </td>
+	</tr><tr>
+		<td>
+                
 
-  <script>
-    const form = document.getElementById('applicationForm');
+               <div style="color:#000000;line-height:25px;font-weight:normal;font-size:13px">
+               <A href='Uploaded Document/PoliciesandNotifications/28072023011943Policies 2016-2019.pdf' target='_blank'>Way Side Amenities Policy 2016-2019</a></a>
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$gvtendernotice$ctl07$HiddenField1" id="ctl00_ContentPlaceHolder1_gvtendernotice_ctl07_HiddenField1" value="2451" />
+                </div>
+                
+                   
+                    </td>
+	</tr><tr>
+		<td>
+                
 
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
+               <div style="color:#000000;line-height:25px;font-weight:normal;font-size:13px">
+               <A href='Uploaded Document/PoliciesandNotifications/15062021025959Final Policy for establishment of  wellness centre 13 Feb 2021_compressed.pdf' target='_blank'>Policy 2020 for Establishment of Wellness Centre/Resort in the State based on Naturopathy/Ayurvedic/Yoga/Traditional Therapy </a></a>
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$gvtendernotice$ctl08$HiddenField1" id="ctl00_ContentPlaceHolder1_gvtendernotice_ctl08_HiddenField1" value="1270" />
+                </div>
+                
+                   
+                    </td>
+	</tr><tr>
+		<td>
+                
 
-      // Set timestamp
-      const now = new Date();
-      document.getElementById('Timestamp').value = now.toISOString();
+               <div style="color:#000000;line-height:25px;font-weight:normal;font-size:13px">
+               <A href='Uploaded Document/PoliciesandNotifications/26032021050819Film Policy 2020 Rules & Regulation Booklet.pdf' target='_blank'>MP Film Policy 2020 Rules & Regulations Booklet</a></a>
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$gvtendernotice$ctl09$HiddenField1" id="ctl00_ContentPlaceHolder1_gvtendernotice_ctl09_HiddenField1" value="1266" />
+                </div>
+                
+                   
+                    </td>
+	</tr><tr>
+		<td>
+                
 
-      // Generate ref number
-      const rand = Math.floor(100 + Math.random() * 900);
-      document.getElementById('Refnumber').value = `MPTB/WTA/${rand}/25`;
+               <div style="color:#000000;line-height:25px;font-weight:normal;font-size:13px">
+               <A href='Uploaded Document/PoliciesandNotifications/26032021050755Comon Application Form for shooting in MP.pdf' target='_blank'>Common Application Form for Shooting in MP</a></a>
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$gvtendernotice$ctl10$HiddenField1" id="ctl00_ContentPlaceHolder1_gvtendernotice_ctl10_HiddenField1" value="1265" />
+                </div>
+                
+                   
+                    </td>
+	</tr><tr>
+		<td>
+                
 
-      const formData = new FormData(form);
-      const data = {};
-      formData.forEach((value, key) => data[key] = value);
+               <div style="color:#000000;line-height:25px;font-weight:normal;font-size:13px">
+               <A href='Uploaded Document/PoliciesandNotifications/26032021050734Subsidy Application Form.pdf' target='_blank'> Subsidy Application Form</a></a>
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$gvtendernotice$ctl11$HiddenField1" id="ctl00_ContentPlaceHolder1_gvtendernotice_ctl11_HiddenField1" value="1264" />
+                </div>
+                
+                   
+                    </td>
+	</tr><tr>
+		<td>
+                
 
-      // Replace this with your actual Web App URL
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbwjwODPUKwJHP4x9wEnFLXupR6Ki4Eh3yHGQt9S-s279egluTo3EOGcXk17fxB/exec';
+               <div style="color:#000000;line-height:25px;font-weight:normal;font-size:13px">
+               <A href='Uploaded Document/PoliciesandNotifications/26032021050712Covid Guideline for shooting.pdf' target='_blank'>Advisory Guidelines (Covid-19) to Restart Shooting in MP</a></a>
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$gvtendernotice$ctl12$HiddenField1" id="ctl00_ContentPlaceHolder1_gvtendernotice_ctl12_HiddenField1" value="1263" />
+                </div>
+                
+                   
+                    </td>
+	</tr><tr>
+		<td>
+                
 
-      try {
-        const response = await fetch(scriptURL, {
-          method: 'POST',
-          body: JSON.stringify(data),
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        });
+               <div style="color:#000000;line-height:25px;font-weight:normal;font-size:13px">
+               <A href='Uploaded Document/PoliciesandNotifications/10022021021733Film Subsidy Application Form 2020.pdf' target='_blank'>Film Subsidy Application Form 2020</a></a>
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$gvtendernotice$ctl13$HiddenField1" id="ctl00_ContentPlaceHolder1_gvtendernotice_ctl13_HiddenField1" value="251" />
+                </div>
+                
+                   
+                    </td>
+	</tr><tr>
+		<td>
+                
 
-        const result = await response.json();
-        alert('Application submitted successfully!\nRef No: ' + data.Refnumber);
-        form.reset();
-      } catch (error) {
-        console.error('Error!', error.message);
-        alert('Failed to submit. Please try again later.');
-      }
-    });
-  </script>
+               <div style="color:#000000;line-height:25px;font-weight:normal;font-size:13px">
+               <A href='Uploaded Document/PoliciesandNotifications/27052020095347Homestays Brochure Hindi.pdf' target='_blank'>Home Stay Brochure - Hindi</a></a>
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$gvtendernotice$ctl14$HiddenField1" id="ctl00_ContentPlaceHolder1_gvtendernotice_ctl14_HiddenField1" value="166" />
+                </div>
+                
+                   
+                    </td>
+	</tr><tr>
+		<td>
+                
+
+               <div style="color:#000000;line-height:25px;font-weight:normal;font-size:13px">
+               <A href='Uploaded Document/PoliciesandNotifications/27052020095300Homestays Brochure ENGLISH.pdf' target='_blank'>Home Stay Brochure - English</a></a>
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$gvtendernotice$ctl15$HiddenField1" id="ctl00_ContentPlaceHolder1_gvtendernotice_ctl15_HiddenField1" value="165" />
+                </div>
+                
+                   
+                    </td>
+	</tr><tr>
+		<td>
+                
+
+               <div style="color:#000000;line-height:25px;font-weight:normal;font-size:13px">
+               <A href='Uploaded Document/PoliciesandNotifications/24052020114349MPTB Gram Stay Plocy 2019.pdf' target='_blank'>Gram stay establishment Scheme 2019</a></a>
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$gvtendernotice$ctl16$HiddenField1" id="ctl00_ContentPlaceHolder1_gvtendernotice_ctl16_HiddenField1" value="164" />
+                </div>
+                
+                   
+                    </td>
+	</tr><tr>
+		<td>
+                
+
+               <div style="color:#000000;line-height:25px;font-weight:normal;font-size:13px">
+               <A href='Uploaded Document/PoliciesandNotifications/24052020114301MPTB Farm Stay Policy 2019.pdf' target='_blank'>Farm stay establishment scheme -2019</a></a>
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$gvtendernotice$ctl17$HiddenField1" id="ctl00_ContentPlaceHolder1_gvtendernotice_ctl17_HiddenField1" value="163" />
+                </div>
+                
+                   
+                    </td>
+	</tr><tr>
+		<td>
+                
+
+               <div style="color:#000000;line-height:25px;font-weight:normal;font-size:13px">
+               <A href='Uploaded Document/PoliciesandNotifications/24052020114227MPTB BnB Policy 2019.pdf' target='_blank'>Bed & breakfast establishment scheme-2019</a></a>
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$gvtendernotice$ctl18$HiddenField1" id="ctl00_ContentPlaceHolder1_gvtendernotice_ctl18_HiddenField1" value="162" />
+                </div>
+                
+                   
+                    </td>
+	</tr><tr>
+		<td>
+                
+
+               <div style="color:#000000;line-height:25px;font-weight:normal;font-size:13px">
+               <A href='Uploaded Document/PoliciesandNotifications/01082018014408Special Tourism Zone.pdf' target='_blank'>STZ (SPECIAL TOURISM ZONE)</a></a>
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$gvtendernotice$ctl19$HiddenField1" id="ctl00_ContentPlaceHolder1_gvtendernotice_ctl19_HiddenField1" value="20" />
+                </div>
+                
+                   
+                    </td>
+	</tr><tr>
+		<td>
+                
+
+               <div style="color:#000000;line-height:25px;font-weight:normal;font-size:13px">
+               <A href='Uploaded Document/PoliciesandNotifications/01082018014336BED_BREAKFAST_ESTABLISHMENT_REGISTRATION.pdf' target='_blank'>BED & BREAKFAST SCHEME 2010 (HOME STAY)</a></a>
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$gvtendernotice$ctl20$HiddenField1" id="ctl00_ContentPlaceHolder1_gvtendernotice_ctl20_HiddenField1" value="19" />
+                </div>
+                
+                   
+                    </td>
+	</tr><tr>
+		<td>
+                
+
+               <div style="color:#000000;line-height:25px;font-weight:normal;font-size:13px">
+               <A href='Uploaded Document/PoliciesandNotifications/01082018014234Land Allotment Policy 2008 (as amended in 2014).pdf' target='_blank'>LAND ALLOTMENT POLICY 2008 (AS AMENDED IN 2014)</a></a>
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$gvtendernotice$ctl21$HiddenField1" id="ctl00_ContentPlaceHolder1_gvtendernotice_ctl21_HiddenField1" value="18" />
+                </div>
+                
+                   
+                    </td>
+	</tr><tr>
+		<td>
+                
+
+               <div style="color:#000000;line-height:25px;font-weight:normal;font-size:13px">
+               <A href='Uploaded Document/PoliciesandNotifications/01082018125106Internship Policy Hindi & English.pdf' target='_blank'>Internship Policy Hindi & English</a></a>
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$gvtendernotice$ctl22$HiddenField1" id="ctl00_ContentPlaceHolder1_gvtendernotice_ctl22_HiddenField1" value="17" />
+                </div>
+                
+                   
+                    </td>
+	</tr><tr>
+		<td>
+                
+
+               <div style="color:#000000;line-height:25px;font-weight:normal;font-size:13px">
+               <A href='Uploaded Document/PoliciesandNotifications/01082018124610Way Side Amenities Policy 2016.pdf' target='_blank'>Way Side Amenities Policy 2016</a></a>
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$gvtendernotice$ctl23$HiddenField1" id="ctl00_ContentPlaceHolder1_gvtendernotice_ctl23_HiddenField1" value="16" />
+                </div>
+                
+                   
+                    </td>
+	</tr><tr>
+		<td>
+                
+
+               <div style="color:#000000;line-height:25px;font-weight:normal;font-size:13px">
+               <A href='Uploaded Document/PoliciesandNotifications/07072018123520WSA Policy.pdf' target='_blank'>WSA Policy</a></a>
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$gvtendernotice$ctl24$HiddenField1" id="ctl00_ContentPlaceHolder1_gvtendernotice_ctl24_HiddenField1" value="10" />
+                </div>
+                
+                   
+                    </td>
+	</tr><tr>
+		<td>
+                
+
+               <div style="color:#000000;line-height:25px;font-weight:normal;font-size:13px">
+               <A href='Uploaded Document/PoliciesandNotifications/07072018122518Internship policy - english.pdf' target='_blank'>Internship policy - english</a></a>
+                    <input type="hidden" name="ctl00$ContentPlaceHolder1$gvtendernotice$ctl25$HiddenField1" id="ctl00_ContentPlaceHolder1_gvtendernotice_ctl25_HiddenField1" value="9" />
+                </div>
+                
+                   
+                    </td>
+	</tr>
+</table>
+                        
+                    </p> 
+     <span class="shaper"></span>
+           
+           </div>
+
+            </div>
+         </div>
+
+         <div class="col-md-3">
+            <div class="sidebar">
+              <div class="card text-white mb-3">
+                <div id="ctl00_hdquicklinks" class="card-header">What’s New</div>
+                <div class="card-body listing">
+                  <ul id="ctl00_importantlinkdiv">
+                     
+                   <ul><li><a href="https://tourism.mp.gov.in/Uploaded%20Document/PoliciesandNotifications/24022025052302Tourism_policy_2025.pdf" target="_blank" class="more">Tourism Policy 2025</a></li><li><a href="Uploaded Document/What’sNew/19122024021552Advertisment-for-tourism-planner _ 2023-24.pdf" target="_blank" class="more">Regarding inviting applications from serving/retired individuals for contractual appointment to the position of &quot;Tourism Planner&quot; in the Madhya Pradesh Tourism Board.</a></li><li><a href="Uploaded Document/What’sNew/1612202412172912082024055756Dr.pdf" target="_blank" class="more">Dr. Vishnu Sridhan Wakankar Rashtriya Samman 2022-23 &amp; 2023-24 Proposal / Recommendation</a></li><li><a href="https://tourism.mp.gov.in/Uploaded%20Document/What%E2%80%99sNew/18032024041205List%20of%20237%20ST%20Participants__FY%202022-23.pdf" target="_blank" class="more">Training list of Household Multipurpose under Domestic Workers Sector Skill Council (DWSCC)</a></li><li><a href="https://tourism.mp.gov.in/Uploaded%20Document/What%E2%80%99sNew/01082023052856%E0%A4%B5%E0%A4%BF%E0%A4%B7%E0%A4%AF%20%E0%A4%B5%E0%A4%B8%E0%A5%8D_%E0%A4%A4%E0%A5%81%20%E0%A4%B5%E0%A4%BF%E0%A4%B6%E0%A5%87%E0%A4%B7%E0%A4%9C%E0%A5%8D%E0%A4%9E-%20%E0%A4%95%E0%A5%8C%E0%A4%B6%E0%A4%B2%20%E0%A4%B5%E0%A4%BF%E0%A4%95%E0%A4%BE%E0%A4%B8%20%E0%A4%8F%E0%A4%B5%E0%A4%82%20%E0%A4%B0%E0%A5%8B%E0%A4%9C%E0%A4%97%E0%A4%BE%E0%A4%B0%20%E0%A4%A8%E0%A4%BF%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%BE%E0%A4%A3%20%E0%A4%A4%E0%A4%A5%E0%A4%BE%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B6%E0%A4%BF%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%A3.pdf" target="_blank" class="more">Contract appointment for 01-01 position of (1) Subject Matter Expert - Skill Development and Employment Generation and (2) Subject Matter Expert - Training by Madhya Pradesh Tourism Board.</a></li><li><a href="Uploaded Document/What’sNew/09062023062830for upload.pdf" target="_blank" class="more">Madhya Pradesh Tourism Board invites applications from experienced experts for contractual appointment to the posts of Project Officer and Assistant Project Officer under Tribal Tourism.</a></li><li><a href="Uploaded Document/What’sNew/04052023125427विज्ञापन प्रारूप_सलाहकार जेण्_डर एवं सामाजिक विकास.pdf" target="_blank" class="more">Advertisement for the post of Consultant, Gender and Social Development in Madhya Pradesh Tourism Board</a></li><li><a href="https://tourism.mp.gov.in/Uploaded%20Document/Documents/Homestay/Online-Portal%20Updated-list-as-on-01.05.2023.pdf" target="_blank" class="more">Registered Homestay List as on 01 May, 2023</a></li><li><a href="Uploaded Document/What’sNew/28042023045357vigyapan_MPT.pdf" target="_blank" class="more">Advertisement for the post of Tourism Planner in Madhya Pradesh Tourism Board</a></li><li><a href="https://tourism.mp.gov.in/Uploaded%20Document/Documents/Homestay/Online-Updated-list-as-on-31.01.2023.pdf" target="_blank" class="more">Updated Registered Homestay List as on 31st January, 2023</a></li><li><a href="Uploaded Document/What’sNew/02012023023300Advertisment for टूरिज्_म प्_लानर _ 2022-23 - Copy - Copy.pdf" target="_blank" class="more">Advertisement for the post of Tourism Planner in Madhya Pradesh Tourism Board</a></li><li><a href="Uploaded Document/What’sNew/20072022020754Advertisment for Civil Engineer.pdf" target="_blank" class="more">Advertisement for Civil Engineer</a></li><li><a href="Uploaded Document/What’sNew/18072022031626Doc1.pdf" target="_blank" class="more">Dr. Vishnu Sridhar Wakankar Rastriya Samman 2020-21 &amp; 2021-22 Proposal/Recommendation</a></li><li><a href="https://tourism.mp.gov.in/contents?page=tourism-quiz&amp;number=Oi9sHoF6x0inwIfClD80BQ==" target="_blank" class="more">MP Tourism Quiz Competition - 2022</a></li><li><a href="Uploaded Document/What’sNew/05072022033222Active Homestay list_01.06.2022.pdf" target="_blank" class="more">Registered Homestay List as on 01 June 2022</a></li><li><a href="Uploaded Document/What’sNew/04012022052804Revised_Advertisement_Form.pdf" target="_blank" class="more">Madhya Pradesh Tourism Board invites applications for the post of &quot;Principal&quot; of the “State Institute of Hotel Management, Indore” on the “regular basis”</a></li><li><a href="Uploaded Document/What’sNew/2508202111263613082021064700Advertisement_updated.pdf" target="_blank" class="more">विज्ञापन : संचालक पद पर संविदा नियुक्ति </a></li><li><a href="https://tourism.mp.gov.in/Uploaded%20Document/Home%20Stay%20List%20As%20on%2001.11.2021.pdf" target="_blank" class="more">Registered Homestay List as on 01 November 2021</a></li><li><a href="https://tourism.mp.gov.in/Uploaded%20Document/Tenders/08042021055536Scan%2008%20Apr%202021%20(1).pdf" target="_blank" class="more">Date Extension of RFP for Engagement of Agency for Digital Media Management</a></li><li><a href="https://tourism.mp.gov.in/Uploaded%20Document/What%E2%80%99sNew/26032021050217Film%20Policy%202020%20Rules%20&amp;%20Regulation%20Booklet.pdf" target="_blank" class="more">MP Film Policy 2020 Rules &amp; Regulations Booklet</a></li><li><a href="https://tourism.mp.gov.in/Uploaded%20Document/What%E2%80%99sNew/23032021064152Covid%20Guideline%20for%20shooting.pdf" target="_blank" class="more">Advisory Guidelines (Covid-19) to Restart Shooting in MP</a></li><li><a href="https://tourism.mp.gov.in/Uploaded%20Document/What%E2%80%99sNew/23032021064035Common%20Application%20Form%20for%20shooting%20in%20MP.pdf" target="_blank" class="more">Common Application Form for Shooting in MP</a></li><li><a href="https://tourism.mp.gov.in/Uploaded%20Document/Tenders/23032021015950Date%20Extension%20to%2012%20April.pdf" target="_blank" class="more">Date Extension of RFP for Engagement of Agency for Digital Media Management</a></li><li><a href="https://tourism.mp.gov.in/Uploaded%20Document/What%E2%80%99sNew/16032021050519EOI%20For%20Museum%20experts.pdf" target="_blank" class="more">EOI for &quot;Empanelment of Organizations/Agencies for providing consultancy services for development of various Museums or similar projects in Madhya Pradesh&quot;</a></li><li><a href="https://tourism.mp.gov.in/Uploaded%20Document/Tenders/02032021110834EOI%20PPP%20Model%20Adventure%20Activities%20in%20MP%20(WB).pdf" target="_blank" class="more">EOI  - प्रदेश में साहसिक गतिविधियों हेतु सार्वजनिक-निजी साझेदारी (PPP) के माध्‍यम से EOI आमंत्रण बावत्</a></li><li><a href="https://tourism.mp.gov.in/Uploaded%20Document/What%E2%80%99sNew/10022021021547Film%20Subsidy%20Application%20Form%202020.pdf" target="_blank" class="more">Film Subsidy Application Form 2020</a></li><li><a href="Uploaded Document/What’sNew/01012021033546vacancy.pdf" target="_blank" class="more">Appointment: Regarding appointment of consultant for the post of &quot;विषय वस्तु विशेषज्ञ-सामुदायिक विकास एवं संस्थागत निर्माण&quot;</a></li><li><a href="Uploaded Document/What’sNew/26122020012723MPTB-5141_V1.pdf" target="_blank" class="more">निरस्तीकरण : Tender Number  02/MPTB/TRG/2020 को अपरिहार्य कारणों से निरस्त किया जाता है।</a></li><li><a href="Uploaded Document/What’sNew/18122020011955Active Homestay list MPTB_updated_v3.pdf" target="_blank" class="more">Registered Homestays List</a></li><li><a href="Uploaded Document/What’sNew/18092020050334Required Company Secretary.pdf" target="_blank" class="more">Advertisement For Company Secretary</a></li><li><a href="https://tourism.mp.gov.in/Uploaded%20Document/Homestay%20Brochure/CORRIGENDUM.pdf" target="_blank" class="more">CORRIGENDUM for Extension of the last date for submission of application for Allotment of govt. land for camping &amp; adventure activities in MP</a></li><li><a href="http://tourism.mp.gov.in/campingsite" target="_blank" class="more">Regarding Allotment of Govt. lands for camping and adventure activities</a></li><li><a href="https://tourism.mp.gov.in/Uploaded%20Document/What%E2%80%99sNew/07032020110942Machagora%20Add.pdf" target="_blank" class="more">EXPRESSION OF INTEREST : Develop Machagora Dam in Chhindwara Distt. as a high-end Tourist  destination.</a></li><li><a href="Uploaded Document/What’sNew/0103202012142024022020011846सलाहकार, विपणन (1).pdf" target="_blank" class="more">Vacancy-मध्यप्रदेश सिविल सेवा पदों पर संविदा नियुक्ति नियम 2017  के अंतर्गत सलाहकार, विपणन के पद पर संविदा नियुक्ति, अंतिम दिनांक : 12-03-2020</a></li><li><a href="Uploaded Document/What’sNew/1410201911372309102019031046Satkar_Adhikari_Advert..pdf" target="_blank" class="more">&quot;Contractual Appointment For Madhya Pradesh Civil Services Job&quot;</a></li><li><a href="Uploaded Document/What’sNew/07032019044530Vacancy.pdf" target="_blank" class="more">संविदा/ प्रतिनियुक्ति भर्ती हेतु आवेदन</a></li><li><a href="Uploaded Document/What’sNew/07032019110913Vacancy.pdf" target="_blank" class="more">संविदा/ प्रतिनियुक्ति भर्ती हेतु आवेदन</a></li></ul></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+   </div>
+</section>
+<!-- about end -->
+
+
+
+<!-- partners -->
+<section class="partners">
+   <div class="container">
+      <div id="ctl00_footer_linkslider" class="logo-slider">
+         
+      </div>
+   </div>
+</section>
+<!-- partners end-->
+<!-- footer -->
+      </article>
+<footer class="footer">
+   <a href="#" class="back-top" id="gotop">
+      <i class="fa fa-angle-up"></i></a>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-4 address">
+               <h6 id="ctl00_deptname">MP Tourism Board</h6>
+              <p>
+                <i class="fa fa-home mr-3"></i> <span id="ctl00_hdofficename">6th Floor, Lily Trade Wing,Jahangirabad,Bhopal–462008</span></p>
+                <p>
+                   <i class="fa fa-envelope mr-3"></i>Email Id:info.mptb@mp.gov.in</p>
+                   <p>
+                      <i class="fa fa-phone mr-3"></i>Phone No.: 0755-2780600</p>
+                      
+                      </div>
+                      <div class="col-md-4">
+                        <h6 id="ctl00_idimplinkfooter">Important Link</h6>
+                        <ul id="ctl00_footermenu" class="footer-links d-flex">
+                    
+                      <li><a href="contents.aspx?page=disclaimer&amp;number=tglCFJxY5rmS25SWwZ3S4g==">Disclaimer</a><a href="contents.aspx?page=disclaimer-2&amp;number=FFjp7b7TC4MpRynyv7jRfw==">Terms and Conditions</a><a href="contents.aspx?page=copyright-policy&amp;number=q06iroh787DN/4t8EyP82w==">Copyright Policy</a><a href="contents.aspx?page=privacy-policy&amp;number=2dJ8TN8+4tEZAtXW7L2Fdw==">Privacy Policy</a><a href="sitemap?number=aMY/TW4AbXpVAp5NGttsAA==">Site Map</a><a href="websitefeedbacks?number=ux07oNDXGTRhh9G6yE0eTw==">Feedback &amp; suggestions</a></li></ul>
+                   </div>
+                   <div class="col-sm-4 validation text-center text-sm-right">
+                       <ul class="d-flex justify-content-center justify-content-sm-end f-social">
+                        <li>
+                           <a href="https://www.facebook.com/MPTourism/" class="btn-facebook"><i class="fa fa-facebook"></i>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="https://www.youtube.com/user/mptourism" class="btn-youtube"><i class="fa fa-youtube"></i>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="https://twitter.com/MPTourism" class="btn-twitter"><i class="fa fa-twitter"></i>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="https://www.instagram.com/mptourism/?hl=en" class="btn-google-plus"><i class="fa fa-instagram"></i>
+                           </a>
+                        </li>
+                     </ul>
+                     <div class="mt-2">
+                     <span id="ctl00_headinglastupdate">Last Updated: </span> <span id="ctl00_websitelastupdate"></span> || <span id="ctl00_headingsitecounter">Site Counter: </span>    <span id="ctl00_websitevisitorcount"></span>
+                     </div>
+                     <a href=""><img src="assets/img/valid-html401.png"></a>
+                     <a href=""><img src="assets/img/vcss.png"></a>
+                     <a href=""><img src="assets/img/icon_W2_a.jpg"></a>
+                  </div>
+               </div>
+            </div>
+            <div class="footer-bottom">
+               <div class="container">
+                  <p id="ctl00_headingdesignby" class="float-left">Designed & developed by Center of Excellence (CoE),</p>
+                  <p id="ctl00_headingcopyright" class="float-right">Copyright © MP Tourism. All Rights Reserved.</p>
+                  <div class="clearfix"></div>
+               </div>
+            </div>
+         </footer>
+         <!-- footer end-->
+      </div>
+    </form>
+    <script src="vendor/js/jquery.min.js"></script>
+      <script src="vendor/js//popper.min.js"></script>
+      <script src="vendor/js/bootstrap.min.js"></script>
+      <script src="vendor/js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="vendor/js/jquery.fancybox.min.js"></script>
+      <script src="vendor/js/bootsnav.js"></script>
+      <script src="vendor/js/slick.min.js"></script>
+      <script src="vendor/js/jquery.newsTicker.min.js"></script>
+      <script src="vendor/js/on-off.js"></script>
+      <script src="assets/js/custom.js"></script>
+    <script src="assets/js/fontresizer.js"></script>
+
+
+
 </body>
 </html>
