@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maheshwar Boat Upgradation Project</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
+    header { background-color: #003366; color: white; padding: 20px; text-align: center; position: relative; }
+    header img { position: absolute; top: 10px; right: 20px; height: 140PX; }
+    section { display: none; padding: 20px; margin: 20px auto; max-width: 960px; background-color: white; border-radius: 8px;
+              box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    section.active { display: block; }
+    h2 { color: #003366; }
+    ul { margin-left: 20px; }
+    .graph { margin-top: 20px; display: flex; gap: 20px; }
+    .bar, .pie { flex: 1; }
+    footer { background-color: #003366; color: white; text-align: center; padding: 10px; }
+
+    .nav-buttons { text-align: center; margin: 20px; }
+    .nav-buttons button { padding: 10px 20px; margin: 0 10px; font-size: 16px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Madhya Pradesh Tourism Board</h1>
+    <p>Maheshwar Boat Upgradation Project</p>
+    <img src="https://static.wixstatic.com/media/614cf9_a101f0e0b63443febc5c09a95f93010a~mv2.png/v1/fill/w_235,h_309,al_c,q_85,usm_1.20_1.00_0.01,enc_avif,quality_auto/MPT_Logo_00.png" alt="MPTB Logo" />
+  </header>
+
+  <section class="active">
+    <h2>Project Overview</h2>
+    <ul>
+      <li><strong>Funding:</strong> CSR initiative by Warehousing Corporation</li>
+      <li><strong>Total CSR Grant:</strong> ₹60 lakhs</li>
+      <li><strong>Objective:</strong> Upgrade traditional boats with fuel-efficient, low-emission outboard engines</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Project Highlights</h2>
+    <ul>
+      <li><strong>Engine Type:</strong> 9.9 HP Yamaha Petrol Outboard Engines</li>
+      <li><strong>Procurement Platform:</strong> GeM (Government e-Marketplace)</li>
+      <li><strong>Engine Cost:</strong> ₹1,41,000 + 28% GST</li>
+      <li><strong>Total Units:</strong> 30 engines (25 initially + 5 additional approved)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Phased Implementation Plan</h2>
+    <ul>
+      <li>Stage 1: Prototype (1 engine) ✅</li>
+      <li>Stage 2: 10 engines ✅</li>
+      <li>Stage 3: 7 engines ✅ (Panchnama & invoices received)</li>
+      <li>Stage 4: 12 engines (7 + 5) ⏳ Work order to be issued</li>
+    </ul>
+    <div class="graph">
+      <div class="bar">
+        <h3>Bar Chart</h3>
+        <img src="https://quickchart.io/chart?c={type:'bar',data:{labels:['Stage 1','Stage 2','Stage 3','Stage 4'],datasets:[{label:'Engines',data:[1,10,7,12]}]}}" alt="Bar Chart" width="100%">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Progress Update</h2>
+    <ul>
+      <li><strong>Total Engines Installed:</strong> 18</li>
+      <li><strong>Remaining:</strong> 12</li>
+      <li><strong>Installation Status:</strong> Ongoing</li>
+    </ul>
+    <div class="graph">
+      <div class="pie">
+        <h3>Progress Pie Chart</h3>
+        <img src="https://quickchart.io/chart?c={type:'pie',data:{labels:['Installed','Pending'],datasets:[{data:[18,12]}]}}" alt="Pie Chart" width="100%">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Expected Outcomes</h2>
+    <ul>
+      <li>Safer and more reliable boat operations</li>
+      <li>Lower emissions and better fuel efficiency</li>
+      <li>Boost to eco-friendly river tourism</li>
+      <li>Enhanced livelihood for boat operators</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Government Coordination & Support</h2>
+    <ul>
+      <li>Active coordination with district authorities</li>
+      <li>Timely approvals and inspections</li>
+      <li>Support for operator training and implementation</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Thank You</h2>
+    <p>Thank you for your continued support in promoting safe and sustainable river tourism.</p>
+    <p><strong>Madhya Pradesh Tourism Board</strong></p>
+  </section>
+
+  <div class="nav-buttons">
+    <button onclick="prevSlide()">⬅️ Previous</button>
+    <button onclick="nextSlide()">Next ➡️</button>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Madhya Pradesh Tourism Board</p>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll("section");
+    let current = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+      });
+    }
+
+    function nextSlide() {
+      if (current < slides.length - 1) current++;
+      showSlide(current);
+    }
+
+    function prevSlide() {
+      if (current > 0) current--;
+      showSlide(current);
+    }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") nextSlide();
+      if (e.key === "ArrowLeft") prevSlide();
+    });
+  </script>
+</body>
+</html>
